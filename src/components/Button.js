@@ -15,14 +15,14 @@ const PrimaryButton = styled(Button)`
     color: ${defaultTheme.textColorOnPrimary};
 `
 export const SecondaryButton = styled(Button)`
-    background-color: ${defaultTheme.textColorOnPrimary};
+    background-color: ${defaultTheme.secondaryCream};
     border: 1px solid ${defaultTheme.primaryPurple};
-    color: ${defaultTheme.primaryPurple};
+    color: ${defaultTheme.textColorOnsecondary};
 `
 export const TertiaryButton = styled(Button)`
-    background-color: transparent;
+    background-color: ${defaultTheme.tertiaryNeutral};
     border: none;
-    color: ${defaultTheme.primaryPurple};
+    color: ${defaultTheme.textColorOnTertiary};
 `
 
 export default PrimaryButton;
