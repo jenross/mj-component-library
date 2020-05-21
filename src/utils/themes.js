@@ -12,5 +12,7 @@ export const defaultTheme = {
     textColorOnPrimary: primary[400],
     textColorOnSecondary: primary[100], 
     textColorOnTertiary: primary[100],
+    disabled: neutral[400],
+    textOnDisabled: neutral[300],
     primaryFont
 }
