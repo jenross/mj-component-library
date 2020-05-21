@@ -1,5 +1,17 @@
 import styled from "styled-components";
 import {defaultTheme, typeScale} from "../utils";
+import { applyStyleModifiers } from "styled-components-modifiers";
+
+const BUTTON_MODIFIERS = {
+    small: () => `
+        font-size: ${typeScale.helperText};
+        padding: 8px; 
+    `, 
+    large: () => `
+        font-size: ${typeScale.h5};
+        padding: 16px 24px; 
+    `
+}
 
 const Button = styled.button`
     padding: 12px 24px; 
@@ -17,7 +29,7 @@ const Button = styled.button`
     }
 `
 
-const PrimaryButton = styled(Button)`
+export const PrimaryButton = styled(Button)`
     background-color: ${defaultTheme.primaryPurple};
     border: none;
     color: ${defaultTheme.textColorOnPrimary};
@@ -36,7 +48,7 @@ const PrimaryButton = styled(Button)`
         border-color: ${defaultTheme.primaryPurpleHover};
     }
 
-
+    ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `
 export const SecondaryButton = styled(Button)`
     background-color: ${defaultTheme.secondaryCream};
@@ -56,6 +68,8 @@ export const SecondaryButton = styled(Button)`
         background-color: ${defaultTheme.secondaryCreamHover};
         border-color: ${defaultTheme.secondaryCreamHover};
     }
+
+    ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `
 export const TertiaryButton = styled(Button)`
     background-color: ${defaultTheme.tertiaryNeutral};
@@ -74,6 +88,7 @@ export const TertiaryButton = styled(Button)`
     &:active {
         border: 1px solid ${defaultTheme.textColorOnTertiary};
     }
+
+    ${applyStyleModifiers(BUTTON_MODIFIERS)};
 `
 
-export default PrimaryButton;

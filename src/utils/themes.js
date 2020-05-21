@@ -14,5 +14,9 @@ export const defaultTheme = {
     textColorOnTertiary: primary[100],
     disabled: neutral[400],
     textOnDisabled: neutral[300],
+    backgroundModal: neutral[100], 
+    textOnModal: primary[500],
     primaryFont
 }
+
+//alternative light or dark theme could go here
