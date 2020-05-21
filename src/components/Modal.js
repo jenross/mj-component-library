@@ -3,6 +3,7 @@ import { defaultTheme, typeScale } from "../utils";
 import styled from "styled-components";
 import { Illustrations, CloseIcon } from "../assets";
 import { PrimaryButton } from "./Button";
+import { useSpring, animated, config } from "react-spring";
 
 const ModalWrapper = styled.div`
   width: 800px;
@@ -40,19 +41,26 @@ const CloseModalButton = styled.button`
   padding: 0;
 `;
 
-export const SignUpModal = () => {
+export const SignUpModal = ({ showModal, setShowModal }) => {
+  const animation = useSpring({
+    opacity: showModal ? 1 : 0,
+    transform: showModal ? `translateY(0)` : `translateY(-200%)`,
+    config: config.slow,
+  });
   return (
-    <ModalWrapper>
-      <img
-        src={Illustrations.SignUp}
-        alt="Sign up for email list"
-        aria-hidden="true"
-      />
-      <SignUpHeader>Sign up for our newsletter!</SignUpHeader>
-      <PrimaryButton>Sign up</PrimaryButton>
-      <CloseModalButton aria-label="Close modal">
-        <CloseIcon />
-      </CloseModalButton>
-    </ModalWrapper>
+    <animated.div style={animation}>
+      <ModalWrapper>
+        <img
+          src={Illustrations.SignUp}
+          alt="Sign up for email list"
+          aria-hidden="true"
+        />
+        <SignUpHeader>Sign up for our newsletter!</SignUpHeader>
+        <PrimaryButton>Sign up</PrimaryButton>
+        <CloseModalButton aria-label="Close modal">
+          <CloseIcon />
+        </CloseModalButton>
+      </ModalWrapper>
+    </animated.div>
   );
 };
