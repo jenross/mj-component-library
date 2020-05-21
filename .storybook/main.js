@@ -7,6 +7,7 @@ module.exports = {
     "@storybook/addon-knobs",
     "@storybook/addon-contexts/register",
     "@storybook/addon-backgrounds/register",
+    "@storybook/addon-a11y/register",
     {
       name: "@storybook/addon-docs",
       options: {
