@@ -7,8 +7,8 @@ export const primary = {
   };
   
   export const primaryDark= {
-    100: "#413F6A",
-    400: "#c0b8b2",
+    100: "#494777",
+    400: "#d8cfc8",
   };
 
   export const neutral = {

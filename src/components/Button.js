@@ -9,6 +9,12 @@ const Button = styled.button`
     font-family: "Raleway";
     transition: background-color 0.2 linear;
     margin: 20px;
+
+    &:disabled {
+        background-color: ${defaultTheme.disabled};
+        color: ${defaultTheme.textOnDisabled};
+        border-color: ${defaultTheme.disabled};
+    }
 `
 
 const PrimaryButton = styled(Button)`
@@ -24,6 +30,13 @@ const PrimaryButton = styled(Button)`
         outline: 3px solid ${defaultTheme.primaryPurpleHover};
         outline-offset: 2px;
     }
+
+    &:active {
+        background-color: ${defaultTheme.primaryPurpleHover};
+        border-color: ${defaultTheme.primaryPurpleHover};
+    }
+
+
 `
 export const SecondaryButton = styled(Button)`
     background-color: ${defaultTheme.secondaryCream};
@@ -38,6 +51,11 @@ export const SecondaryButton = styled(Button)`
         outline: 3px solid ${defaultTheme.primaryPurpleHover};
         outline-offset: 2px;
     }
+
+    &:active {
+        background-color: ${defaultTheme.secondaryCreamHover};
+        border-color: ${defaultTheme.secondaryCreamHover};
+    }
 `
 export const TertiaryButton = styled(Button)`
     background-color: ${defaultTheme.tertiaryNeutral};
@@ -51,6 +69,10 @@ export const TertiaryButton = styled(Button)`
     &:focus {
         outline: 3px solid ${defaultTheme.textColorOnTertiary};
         outline-offset: 2px;
+    }
+
+    &:active {
+        border: 1px solid ${defaultTheme.textColorOnTertiary};
     }
 `
 
