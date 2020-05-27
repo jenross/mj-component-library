@@ -4,14 +4,19 @@ import {
   SignUpModal,
   PrimaryButton,
   SecondaryButton,
-  TertiaryButton,
+  TertiaryButton
 } from "./components";
 import { GlobalStyle } from "./utils";
+import styled from "styled-components";
+
+const Container = styled.div`
+  background-color: #000;
+`;
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <div>
+    <Container>
       <PrimaryButton>Hello world</PrimaryButton>
       <SecondaryButton>Hello world</SecondaryButton>
       <TertiaryButton>Hello world</TertiaryButton>
@@ -21,9 +26,9 @@ const App = () => {
       >
         Toggle modal
       </button>
-      <SignUpModal showModal={showModal} setShowModal={setShowModal}/>
+      <SignUpModal showModal={showModal} setShowModal={setShowModal} />
       <GlobalStyle />
-    </div>
+    </Container>
   );
 };
 

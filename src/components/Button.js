@@ -39,13 +39,13 @@ export const PrimaryButton = styled(Button)`
     }
 
     &:focus {
-        outline: 3px solid ${defaultTheme.primaryPurpleHover};
-        outline-offset: 2px;
+        outline: 3px solid ${defaultTheme.textColorOnPrimary};
+        /* outline-offset: 2px; */
     }
 
     &:active {
-        background-color: ${defaultTheme.primaryPurpleHover};
-        border-color: ${defaultTheme.primaryPurpleHover};
+        background-color: ${defaultTheme.primaryPurpleActive};
+        border-color: ${defaultTheme.primaryPurpleActive};
     }
 
     ${applyStyleModifiers(BUTTON_MODIFIERS)};
